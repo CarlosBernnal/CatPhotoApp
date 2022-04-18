@@ -1,0 +1,227 @@
+body{
+  background-color: cornsilk;
+}
+.pagina{
+  width: 95%;
+  max-width: 1300px;
+  margin: 45px auto;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "caja1 caja2 caja2 caja2"
+                       "caja4 caja4 caja4 caja3"
+                       "caja5 caja6 caja6 caja8"
+                       "caja5 caja7 caja7 caja8";
+}
+.pagina .caja1{
+  padding: 5px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja1;
+}
+.image1{
+  width: 100%;
+  height: 100%;
+}
+.image1:hover {
+animation-fill-mode: forwards;
+animation-name: grande1;
+animation-duration: 1s;
+}
+
+@keyframes grande1 {
+100% {
+  left: 50px;
+  width: 340px;
+}
+}
+.pagina .caja2{
+  padding: 10px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja2;
+}
+.p-descripcion{
+  text-align: justify;
+}
+.pagina .caja3{
+  padding: 10px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja3;
+}
+.pagina .caja4{
+  padding: 10px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja4;
+}
+.pagina .caja5{
+  padding: 10px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja5;
+}
+.image2{
+  width: 100%;
+  height: 100%;
+}
+.image2:hover {
+animation-fill-mode: forwards;
+animation-name: grande2;
+animation-duration: 1s;
+}
+
+@keyframes grande2 {
+100% {
+  left: 50px;
+  width: 340px;
+}
+}
+.pagina .caja6{
+  padding: 10px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja6;
+}
+.links2 {
+  padding: 10px;
+  font-family: Tahoma;
+  text-align: center;
+  color: black;
+}
+.fullCard {
+  border: 1px solid rgb(78, 77, 92);
+  background-color: lavender;
+  border-radius: 7px;
+}
+.fullCard:hover {
+  animation-fill-mode: forwards;
+  animation-name: background-color-fullCard;
+  animation-duration: 500ms;
+}
+@keyframes background-color-fullCard {
+  100% {
+    background-color: lavenderblush;
+  }
+}
+.cardTittle {
+  text-align: center;
+  background-color: rgba(45, 45, 45, 0.1);
+  padding: 10px;
+  font-size: 22px;
+  }
+.cardContent {
+  padding: 10px;
+}
+.cardText {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.pagina .caja7{
+  padding: 10px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja7;
+}
+#form{
+  width: 300px;
+  padding: 10px;
+  background-color: lavender;
+  text-align: center;
+  border: 1px solid rgb(78, 77, 92);
+  border-radius: 7px;
+}
+#form:hover {
+  animation-fill-mode: forwards;
+  animation-name: background-form;
+  animation-duration: 500ms;
+}
+@keyframes background-form {
+  100% {
+    background-color: lavenderblush;
+  }
+}
+.pagina .caja8{
+  padding: 10px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja8;
+}
+.image3{
+  width: 100%;
+  height: 100%;
+}
+.image3:hover {
+animation-fill-mode: forwards;
+animation-name: grande3;
+animation-duration: 1s;
+}
+@keyframes grande3 {
+100% {
+  left: 50px;
+  width: 290px;
+}
+}
+/*FALTA ACOMODAR LA POSICION DEL CONTENIDO DE LOS FORMS*/
+@media screen and (max-width: 1050px) {
+body{
+    background-color: cornflowerblue;
+}
+.pagina{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "caja2 caja2 caja2 caja2"
+                        "caja1 caja4 caja4 caja4"
+                        "caja7 caja6 caja6 caja6"
+                        "caja3 caja6 caja6 caja6"
+                        "caja5 caja5 caja8 caja8";
+}
+}
+@media screen and (max-width: 800px) {
+body{
+    background-color: coral;
+}
+.pagina{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "caja2 caja2"
+                        "caja1 caja3"
+                        "caja1 caja7"
+                        "caja6 caja4"
+                        "caja5 caja8";
+}
+}
+@media screen and (max-width: 700px) {
+body{
+    background-color: rgb(223, 208, 202);
+}
+.pagina{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: "caja2"
+                        "caja1" 
+                        "caja3"
+                        "caja4" 
+                        "caja7"
+                        "caja6" 
+                        "caja5" 
+                        "caja8";
+  }
+  
+}

@@ -1,140 +1,227 @@
-.image{
-  width: 300px;
-  border-radius: 5%;
-  margin: 2% 0% 1% 2%;
-  }
-.thick-green-border{
-  border-width: 3px;
-  border-style: solid;
-  border-color: brown;
-  }
-.image2{
-  width: 650px;
-  margin: 1% 0% 1% 38%;
-}
 body{
-  background-color: whitesmoke;
+  background-color: cornsilk;
 }
-.darkblue-text {
-  color: darkblue;
-  margin-top: 10%;
+.pagina{
+  width: 95%;
+  max-width: 1300px;
+  margin: 45px auto;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "caja1 caja2 caja2 caja2"
+                       "caja4 caja4 caja4 caja3"
+                       "caja5 caja6 caja6 caja8"
+                       "caja5 caja7 caja7 caja8";
 }
-div{
-  font-size: 16px;
-  font-family: "Calibri";
+.pagina .caja1{
+  padding: 5px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja1;
 }
-label{
-  font-size: 14px;
-  font-family: Verdana;
+.image1{
+  width: 100%;
+  height: 100%;
 }
-#div-color{
-  background-color: lavender;
-  padding: 15px;
-  margin: -19% 75% 0% 3%;
+.image1:hover {
+animation-fill-mode: forwards;
+animation-name: grande1;
+animation-duration: 1s;
 }
-#form-color{
-  background-color: lavender;
-  text-align: center;
-  /*ORDEN: TOP,RIGHT,BOTTOM,LEFT*/
-  padding: 15px 0px 15px 0px;
-  /*ORDEN: TOP,RIGHT,BOTTOM,LEFT*/
-  margin: -20% 75% 15% 3%;
+
+@keyframes grande1 {
+100% {
+  left: 50px;
+  width: 340px;
 }
-.p-color{
-  background-color:lavender;
-  text-align: justify;
-  padding-top: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  margin-right: 1%;
-  margin-left: 27%;
-  margin-top: -29%;
-  margin-bottom: 10%;
-  font-size: 18px;
-  font-family: 'Hubballi', cursive;
 }
-.enfermedades{
-  margin-left: 27%;
-  margin-top: -3%;
-  margin-right: 1%;
+.pagina .caja2{
   padding: 10px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 15px;
-  background-color: lavender;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja2;
 }
-[type='radio'] {
-  margin: 10px 0px 15px 0px;
-}
-[type='checkbox'] {
-  margin: 10px 0px 15px 0px;
-}
-h4 {
-text-align: center;
-background-color: rgba(45, 45, 45, 0.1);
-padding: 10px;
-font-size: 25px;
-}
-p {
+.p-descripcion{
   text-align: justify;
+}
+.pagina .caja3{
+  padding: 10px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja3;
+}
+.pagina .caja4{
+  padding: 10px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja4;
+}
+.pagina .caja5{
+  padding: 10px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja5;
+}
+.image2{
+  width: 100%;
+  height: 100%;
+}
+.image2:hover {
+animation-fill-mode: forwards;
+animation-name: grande2;
+animation-duration: 1s;
+}
+
+@keyframes grande2 {
+100% {
+  left: 50px;
+  width: 340px;
+}
+}
+.pagina .caja6{
+  padding: 10px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja6;
 }
 .links2 {
-  margin: 20px 0px 5px -30px;
   padding: 10px;
   font-family: Tahoma;
   text-align: center;
   color: black;
 }
 .fullCard {
-  width: 510px;
   border: 1px solid rgb(78, 77, 92);
   background-color: lavender;
   border-radius: 7px;
-  margin: 10% 0px 5px 30%;
-  padding: 10px;
 }
+.fullCard:hover {
+  animation-fill-mode: forwards;
+  animation-name: background-color-fullCard;
+  animation-duration: 500ms;
+}
+@keyframes background-color-fullCard {
+  100% {
+    background-color: lavenderblush;
+  }
+}
+.cardTittle {
+  text-align: center;
+  background-color: rgba(45, 45, 45, 0.1);
+  padding: 10px;
+  font-size: 22px;
+  }
 .cardContent {
   padding: 10px;
 }
 .cardText {
   margin-bottom: 30px;
-  text-align: justify;
+  text-align: center;
+}
+.pagina .caja7{
+  padding: 10px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja7;
+}
+#form{
+  width: 300px;
+  padding: 10px;
+  background-color: lavender;
+  text-align: center;
+  border: 1px solid rgb(78, 77, 92);
+  border-radius: 7px;
+}
+#form:hover {
+  animation-fill-mode: forwards;
+  animation-name: background-form;
+  animation-duration: 500ms;
+}
+@keyframes background-form {
+  100% {
+    background-color: lavenderblush;
+  }
+}
+.pagina .caja8{
+  padding: 10px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  grid-area: caja8;
 }
 .image3{
-  width: 300px;
-  margin: -28% 5% 1% 3%;
-  border-width: 3px;
-  border-style: solid;
-  border-color: brown;
-  border-radius: 5px;
+  width: 100%;
+  height: 100%;
 }
-.image4{
-  width: 210px;
-  margin: -35% 0% 1% 75%;
-  border-width: 3px;
-  border-style: solid;
-  border-color: brown;
-  border-radius: 5px;
+.image3:hover {
+animation-fill-mode: forwards;
+animation-name: grande3;
+animation-duration: 1s;
 }
-header {
-  background-color: #435251;
-  color: white;
-  margin-top: -3%;
+@keyframes grande3 {
+100% {
+  left: 50px;
+  width: 290px;
 }
-h2 {
-  color: white;
-  font-size: 50px;
-  font-family: "Lobster";
-  padding: 1%;
-  margin-left: 10px;
 }
-footer{
-    font-family: monospace;
-    font-size: 15px;
-    padding: 10px;
-    margin-top: 10%;
-    margin-bottom: -0.5%;
-    text-align: center;
-    background-color: #435251;
-  color: white;
+/*FALTA ACOMODAR LA POSICION DEL CONTENIDO DE LOS FORMS*/
+@media screen and (max-width: 1050px) {
+body{
+    background-color: cornflowerblue;
+}
+.pagina{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "caja2 caja2 caja2 caja2"
+                        "caja1 caja4 caja4 caja4"
+                        "caja7 caja6 caja6 caja6"
+                        "caja3 caja6 caja6 caja6"
+                        "caja5 caja5 caja8 caja8";
+}
+}
+@media screen and (max-width: 800px) {
+body{
+    background-color: coral;
+}
+.pagina{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "caja2 caja2"
+                        "caja1 caja3"
+                        "caja1 caja7"
+                        "caja6 caja4"
+                        "caja5 caja8";
+}
+}
+@media screen and (max-width: 700px) {
+body{
+    background-color: rgb(223, 208, 202);
+}
+.pagina{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: "caja2"
+                        "caja1" 
+                        "caja3"
+                        "caja4" 
+                        "caja7"
+                        "caja6" 
+                        "caja5" 
+                        "caja8";
+  }
+  
 }
